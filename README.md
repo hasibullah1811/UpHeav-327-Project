@@ -25,15 +25,15 @@ Main Features(Distil a daily journal down into basics):
 14. What gets you down section (from the selected activities while creating the journal)
 
 # Team Information
-Total Team Member: 01
-Member: 01
+Total Team Member: 01, 
+Member: 01, 
 Name: Hasibullah Hasib
 ID: 1811451042
 
-Product Owner: Hasibullah Hasib
+Product Owner: Hasibullah Hasib, 
 Scrum Master: Hasibullah Hasib
 
-# Materials I will from the following websites
+# Materials I will use from the following websites
 1. https://www.freepik.com/
 2. https://rive.app/
 3. Third party packages: https://pub.dev/flutter/packages
