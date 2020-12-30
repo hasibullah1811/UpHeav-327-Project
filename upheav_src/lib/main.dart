@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:upheav_src/local_database/database_creator.dart';
 import 'package:upheav_src/screens/splash_screen.dart';
 
 Future<void> main() async {
@@ -7,7 +8,7 @@ Future<void> main() async {
   SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-
+  await DatabaseCreator().initDatabase();
   runApp(MainApp());
 }
 
