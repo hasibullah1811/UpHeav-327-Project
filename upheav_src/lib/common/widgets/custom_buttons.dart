@@ -8,6 +8,7 @@ import 'package:upheav_src/mobx_callbacks/splash_screen_states.dart';
 import 'package:upheav_src/common/utils/custom_icons_icons.dart';
 import 'package:upheav_src/common/utils/theme_styles.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:upheav_src/screens/notification_permission_screen.dart';
 
 class BottomNavButtonSplash extends StatelessWidget {
   const BottomNavButtonSplash({
@@ -106,10 +107,10 @@ class _BottomNavButtonCircleState extends State<BottomNavButtonCircle> {
                 context,
                 PageTransition(
                   type: PageTransitionType.rightToLeft,
-                  // child: NotificationPermissionScreen(
-                  //   updateAnimationStore: widget.updateAnimationStore,
-                  //   nickName: widget.nickName,
-                  // ),
+                  child: NotificationPermissionScreen(
+                    updateAnimationStore: widget.updateAnimationStore,
+                    nickName: widget.nickName,
+                  ),
                 ),
               )
             : // Find the Scaffold in the widget tree and use it to show a SnackBar.

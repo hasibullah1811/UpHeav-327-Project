@@ -70,11 +70,6 @@ class _SplashScreenState extends State<SplashScreen>
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
 
-    final widthNeuContainer = Container(
-      width: width,
-      color: ThemeColors.kNeumorphicColor,
-    );
-
     final bool keyboardOpen = MediaQuery.of(context).viewInsets.bottom > 0;
 
     return WillPopScope(
