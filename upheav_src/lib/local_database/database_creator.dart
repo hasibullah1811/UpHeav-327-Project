@@ -11,11 +11,18 @@ class DatabaseCreator {
   static const name = 'name';
   static const isDeleted = 'isDeleted';
 
+  // Activity Model fromJson
   static const activityTable = 'activityTable';
   static const activityId = 'activityID';
   static const activityName = 'activityName';
   static const activityIcon = 'activityIcon';
   static const activityScale = 'activityScale';
+
+  //Feelings Model fromJson
+  static const feelingsTable = 'feelingsTable';
+  static const feelingsId = 'feelingsId';
+  static const feelingsName = 'feelingsName';
+  static const feelingsScale = 'feelingsScale';
 
   static void databaseLog(String functionName, String sql,
       [List<Map<String, dynamic>> selectQueryResult,
@@ -50,6 +57,17 @@ class DatabaseCreator {
       $activityId INTEGER PRIMARY KEY,
       $activityName TEXT,
       $activityScale INTEGER PRIMARY KEY,
+    )''';
+
+    await db.execute(userSql);
+  }
+
+  Future<void> createFeelingsTable(Database db) async {
+    final userSql = '''CREATE TABLE $feelingsTable
+    (
+      $feelingsId INTEGER PRIMARY KEY,
+      $feelingsName TEXT,
+      $feelingsScale INTEGER PRIMARY KEY,
     )''';
 
     await db.execute(userSql);
