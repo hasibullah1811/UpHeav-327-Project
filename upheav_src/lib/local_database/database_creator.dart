@@ -11,6 +11,12 @@ class DatabaseCreator {
   static const name = 'name';
   static const isDeleted = 'isDeleted';
 
+  static const activityTable = 'activityTable';
+  static const activityId = 'activityID';
+  static const activityName = 'activityName';
+  static const activityIcon = 'activityIcon';
+  static const activityScale = 'activityScale';
+
   static void databaseLog(String functionName, String sql,
       [List<Map<String, dynamic>> selectQueryResult,
       int insertAndUpdateQueryResult,
@@ -33,6 +39,17 @@ class DatabaseCreator {
       $id INTEGER PRIMARY KEY,
       $name TEXT,
       $isDeleted BIT NOT NULL
+    )''';
+
+    await db.execute(userSql);
+  }
+
+  Future<void> createActivityTable(Database db) async {
+    final userSql = '''CREATE TABLE $activityTable
+    (
+      $activityId INTEGER PRIMARY KEY,
+      $activityName TEXT,
+      $activityScale INTEGER PRIMARY KEY,
     )''';
 
     await db.execute(userSql);

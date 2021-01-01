@@ -5,7 +5,6 @@ import 'package:upheav_src/local_database/user_service_repository.dart';
 import 'package:upheav_src/models/user_model.dart';
 import 'package:upheav_src/screens/home_screen.dart';
 import 'package:upheav_src/common/utils/colors.dart';
-import 'package:upheav_src/common/utils/custom_icons_icons.dart';
 import 'package:upheav_src/common/utils/fade_animation.dart';
 import 'package:upheav_src/common/utils/theme_styles.dart';
 import 'package:upheav_src/common/widgets/custom_buttons.dart';
@@ -154,9 +153,9 @@ class _NotificationPermissionScreenState
                               context,
                               MaterialPageRoute(
                                 builder: (context) => HomeScreen(
-                                    // nickName: widget
-                                    //     .updateAnimationStore.currentNickName,
-                                    ),
+                                  userName: widget
+                                      .updateAnimationStore.currentNickName,
+                                ),
                               ),
                               ModalRoute.withName('/'),
                             );
@@ -184,9 +183,9 @@ class _NotificationPermissionScreenState
                         context,
                         MaterialPageRoute(
                           builder: (context) => HomeScreen(
-                              // nickName:
-                              //     widget.updateAnimationStore.currentNickName,
-                              ),
+                            userName:
+                                widget.updateAnimationStore.currentNickName,
+                          ),
                         ),
                         ModalRoute.withName('/'),
                       );
@@ -205,7 +204,7 @@ class _NotificationPermissionScreenState
   saveUserNickName() async {
     await initializeSharedPreferenceStorage();
     localStorage.setString(
-        'nickName', widget.updateAnimationStore.currentNickName);
+        'userName', widget.updateAnimationStore.currentNickName);
 
     createUser();
   }
