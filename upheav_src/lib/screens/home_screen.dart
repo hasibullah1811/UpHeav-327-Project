@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:upheav_src/local_database/user_service_repository.dart';
 import 'package:upheav_src/models/user_model.dart';
+import 'package:upheav_src/screens/rate_your_mood_screen.dart';
 import 'package:upheav_src/screens/splash_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -67,7 +69,13 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Center(
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => RateYourMoodScreen(),
+                        ));
+                  },
                   child: Text('Mood Check'),
                 ),
               ),
