@@ -56,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Center(
                 child: RaisedButton(
                   onPressed: logoutUser,
-                  child: Text('Logout'),
+                  child: Text('Sign Out'),
                 ),
               ),
               Center(
