@@ -1,18 +1,19 @@
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
-import 'package:simple_animations/simple_animations.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:upheav_src/common/utils/components.dart';
 
 import 'package:upheav_src/common/utils/background_color_tween.dart';
-import 'package:upheav_src/common/utils/custom_icons_icons.dart';
+
 import 'package:upheav_src/common/utils/fade_animation.dart';
 import 'package:upheav_src/common/utils/flare_controller.dart';
 import 'package:upheav_src/common/utils/mood_title_text.dart';
 import 'package:upheav_src/common/utils/slider_painter.dart';
 import 'dart:math' as math;
 import 'package:vector_math/vector_math_64.dart' as vector;
+
+import 'activity_screen.dart';
 
 enum SlideState { BAD, OK, GOOD }
 
@@ -143,14 +144,14 @@ class _RateYourMoodScreenState extends State<RateYourMoodScreen>
 
   _buildButton() => InkWell(
         onTap: () {
-          // Navigator.push(
-          //     context,
-          //     MaterialPageRoute(
-          //       builder: (context) => ActivityScreen(),
-          //     ));
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ActivityScreen(),
+              ));
         },
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(32.0),
           child: Stack(
             children: [
               Hero(

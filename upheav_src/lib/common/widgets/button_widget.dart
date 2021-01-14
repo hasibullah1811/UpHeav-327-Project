@@ -32,6 +32,7 @@ class ButtonWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             child: Container(
               height: 54.0,
+              color: Colors.transparent,
               child: Center(
                 child: Text(
                   title,

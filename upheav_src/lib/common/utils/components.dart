@@ -99,7 +99,7 @@ class BuildHeaderText extends StatelessWidget {
     return FadeAnimation(
       0.4,
       Padding(
-        padding: EdgeInsets.symmetric(horizontal: 125.w),
+        padding: EdgeInsets.symmetric(horizontal: 110.w),
         child: Text(
           "$headerText",
           textAlign: headerAlign,
