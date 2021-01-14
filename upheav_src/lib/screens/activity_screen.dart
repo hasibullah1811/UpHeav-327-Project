@@ -11,6 +11,8 @@ import 'package:upheav_src/common/utils/custom_icons_icons.dart';
 
 import 'package:upheav_src/common/widgets/activity_widget_row.dart';
 
+import 'feelings_screen.dart';
+
 class ActivityScreen extends StatefulWidget {
   @override
   _ActivityScreenState createState() => _ActivityScreenState();
@@ -162,13 +164,12 @@ class _ActivityScreenState extends State<ActivityScreen>
                     textColor: Colors.white,
                     fontSize: 12.0,
                   )
-                : Container();
-            // Navigator.push(
-            //   context,
-            //   MaterialPageRoute(
-            //     builder: (context) => FeelingsScreen(),
-            //   ),
-            // );
+                : Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FeelingsScreen(),
+                    ),
+                  );
           },
           child: Padding(
             padding: const EdgeInsets.all(32.0),

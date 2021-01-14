@@ -468,6 +468,17 @@ mixin _$ActivityScreenCallBackStore on ActivityScreenCallBack, Store {
   }
 
   @override
+  dynamic updateIsRelaxingSelected() {
+    final _$actionInfo = _$ActivityScreenCallBackActionController.startAction(
+        name: 'ActivityScreenCallBack.updateIsRelaxingSelected');
+    try {
+      return super.updateIsRelaxingSelected();
+    } finally {
+      _$ActivityScreenCallBackActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 isWorkSelected: ${isWorkSelected},
