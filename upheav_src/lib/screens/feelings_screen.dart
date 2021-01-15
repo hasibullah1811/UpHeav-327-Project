@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -13,6 +14,8 @@ import 'package:upheav_src/common/utils/theme_styles.dart';
 import 'package:supercharged/supercharged.dart';
 import 'dart:math' as math;
 import 'package:vector_math/vector_math_64.dart' as vector;
+
+import 'describe_your_day_screen.dart';
 
 class FeelingsScreen extends StatefulWidget {
   @override
@@ -973,29 +976,37 @@ class _FeelingsScreenState extends State<FeelingsScreen> {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  top: 220.0,
-                  left: 16,
-                  right: 16.0,
-                ),
-                child: Container(
-                  child: Center(
-                    child: Text(
-                      "Next",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18.0,
-                        fontWeight: FontWeight.bold,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                          builder: (context) => DescribeYourDayScreen()));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 220.0,
+                    left: 16,
+                    right: 16.0,
+                  ),
+                  child: Container(
+                    child: Center(
+                      child: Text(
+                        "Next",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  ),
-                  height: 54,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(24),
+                    height: 54,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(24),
+                      ),
+                      color: Colors.green,
                     ),
-                    color: Colors.green,
                   ),
                 ),
               ),
